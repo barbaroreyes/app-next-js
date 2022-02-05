@@ -10,7 +10,7 @@ switch (method) {
     
         try {
             const product = await Product.find({});
-            res.status(200).json({success: true , product:product})
+            res.status(200).json({success: true , product})
             
         } catch (error) {
             res.status(404).json({success:false})
@@ -21,7 +21,7 @@ switch (method) {
     case 'POST': {
         try {
             const product = await Product.create(req.body.product)
-            res.status(200).json({success: true , product:product})
+            res.status(200).json({success: true , product})
             
         } catch (error) {
             res.status(404).json({success:false})
